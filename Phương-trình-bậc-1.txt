@@ -1,0 +1,47 @@
+Phương trình bậc 1
+DECLARE
+    a number;
+    b number;
+    x number;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('Phuong Trinh Bac 1');
+    a = a;
+    b = b;
+    DBMS_OUTPUT.PUT_LINE(Gia tri cua a'a);
+    DBMS_OUTPUT.PUT_LINE(Gia tri cua b'b);
+    IF a=0 then
+        if b=0 then
+            dbms_output.put_line('phuong trinh vo so nghiem !');
+        else
+            dbms_output.put_line('phuong trinh vo nghiem !');
+        end if;
+    else
+        x = (-b)a;
+        DBMS_OUTPUT.PUT_LINE('phuong trinh co nghiem x = 'x);
+    end if;
+end;
+
+
+
+
+--------------------------------------------
+declare
+  A number := '&A';
+  B number := '&B';
+  C number := '&C';
+  D number := B * B - 4 * A * C;
+begin
+  if A = 0 then
+    dbms_output.put_line('x=' || to_char(-C/B));
+  end if;
+  return x;
+
+  if D = 0 then
+    dbms_output.put_line('x = ' || to_char(-B/2*A));
+  elsif D > 0 then
+    dbms_output.put_line('x1 = ' || to_char((-B-sqrt(D))/2*A));
+    dbms_output.put_line('x2 = ' || to_char((-B+sqrt(D))/2*A));
+  else
+    dbms_output.put_line('Phuong trinh vo nghiem');
+  end if;
+end;
